@@ -1,0 +1,88 @@
+[import](common.lg)
+
+# TextInput_Prompt_rvYsjk()
+[Activity
+    Text = ${TextInput_Prompt_rvYsjk_text()}
+]
+
+# TextInput_Prompt_rvYsjk_text()
+- Do you have existing account with DBS?
+# SendActivity_Zf0w35()
+[Activity
+    Text = ${SendActivity_Zf0w35_text()}
+]
+
+# SendActivity_Zf0w35_text()
+- sorry! i cannot understand your input
+# TextInput_Prompt_2aVtjR()
+[Activity
+    Text = ${TextInput_Prompt_2aVtjR_text()}
+]
+
+# TextInput_Prompt_2aVtjR_text()
+- Do you have internet banking?
+# SendActivity_zgBLFr()
+[Activity
+    Text = ${SendActivity_zgBLFr_text()}
+    SuggestedActions = ["1. login your internet banking", "click on open new account", "3. enter required details", "submit application"]
+]
+
+# SendActivity_zgBLFr_text()
+- To open new account with Internet banking, please login to your account and follow steps to create new account.
+# SendActivity_6kXrC2()
+[Activity
+    Text = ${SendActivity_6kXrC2_text()}
+]
+
+# SendActivity_6kXrC2_text()
+- To open new account for exsiting customers, please contact your banker to assist with new account openings.
+# TextInput_Prompt_8oPGoU()
+[Activity
+    Text = ${TextInput_Prompt_8oPGoU_text()}
+]
+
+# TextInput_Prompt_8oPGoU_text()
+- Are you Singapore citizen?
+# SendActivity_HQCx7H()
+[Activity
+    Text = ${SendActivity_HQCx7H_text()}
+]
+
+# SendActivity_HQCx7H_text()
+- To open account for citizens, please reachout to our nearest bank branch and get assistance our friendly staff to open acount
+# TextInput_Prompt_e3e4Qv()
+[Activity
+    Text = ${TextInput_Prompt_e3e4Qv_text()}
+]
+
+# TextInput_Prompt_e3e4Qv_text()
+- Do you have EP / SP / PR?
+# SendActivity_JTArYt()
+[Activity
+    Text = ${SendActivity_JTArYt_text()}
+    Attachments = ${SendActivity_JTArYt_attachment_dqIMLh()}
+    AttachmentLayout = carousel
+]
+
+# SendActivity_JTArYt_text()
+- To open new account for foreigners, please reach out to our nearest brank branch and provide required documents to our staff. 
+# SendActivity_7d3Car()
+[Activity
+    Text = ${SendActivity_7d3Car_text()}
+]
+
+# SendActivity_7d3Car_text()
+- Sorry! we offer account for only Singapore citizens or Visa holders.
+# SendActivity_Mrpo1t()
+[Activity
+    Text = ${SendActivity_Mrpo1t_text()}
+]
+
+# SendActivity_Mrpo1t_text()
+- thank you.
+# SendActivity_JTArYt_attachment_dqIMLh()
+[ThumbnailCard
+  title = QR
+  text = QR Link
+  image = https://firebasestorage.googleapis.com/v0/b/miroboticproject.appspot.com/o/dbs%2Fqr-code.png?alt=media&token=e72965bc-0b60-4a46-a78b-79d84278a68b
+]

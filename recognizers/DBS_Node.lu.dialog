@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_DBS_Node",
+  "recognizers": {
+    "en-us": "DBS_Node.en-us.lu",
+    "": "DBS_Node.en-us.lu"
+  }
+}

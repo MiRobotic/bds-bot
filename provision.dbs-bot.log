@@ -1,0 +1,25 @@
+{
+  "profileName": "dbs-bot",
+  "jobId": "706affa3-65f4-4b68-8293-4a358aad2beb",
+  "projectId": "37714.71128006254",
+  "time": "2022-05-17T03:16:36.068Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Use the Resource Group: dbs-bot at eastus",
+    "> Creating App Registration ...",
+    "Start to add password for App, Id : 3067dfcc-0286-4647-bfa2-674f2d2a4fb7",
+    "> Create App Registration Success! ID: 3067dfcc-0286-4647-bfa2-674f2d2a4fb7",
+    "Deploying Web App Resource ...",
+    "Deploying Bot Resource ...",
+    "Deploying Luis Authoring Resource ...",
+    "Deploying Luis Resource ...",
+    "Deploying Application Insights Resource ...",
+    "> Linking Application Insights settings to Bot Service ...",
+    "> AppInsights AppId: f6c58278-31c6-4d2f-a38d-a17ceedbbcb3 ...",
+    "> AppInsights InstrumentationKey: 0ba7029c-8930-4926-b1d1-a15d7e400dc2 ...",
+    "> AppInsights ApiKey: gzct2r4a440pnihs6i6cdicjfiydyefb1erqsjhm ...",
+    "> Linking Application Insights settings to Bot Service Success!",
+    "Provisioning completed successfully!"
+  ]
+}

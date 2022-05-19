@@ -1,0 +1,19 @@
+{
+  "profileName": "dbs-bot-1",
+  "jobId": "a9a250f1-4add-4acd-aa35-df8ca1f62ef1",
+  "projectId": "37714.71128006254",
+  "time": "2022-05-16T07:28:42.489Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Use the Resource Group: dbs-bot at eastus",
+    "> Creating App Registration ...",
+    "Start to add password for App, Id : 04f2aaa2-1c44-495d-97cc-3bcd5109d7f2",
+    "> Create App Registration Success! ID: 04f2aaa2-1c44-495d-97cc-3bcd5109d7f2",
+    "Deploying Web App Resource ...",
+    "Deploying Bot Resource ...",
+    "Deploying Luis Authoring Resource ...",
+    "Deploying Luis Resource ...",
+    "Provisioning completed successfully!"
+  ]
+}

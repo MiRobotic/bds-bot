@@ -1,0 +1,52 @@
+[import](common.lg)
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# TemplateName()
+-TemplateValue
+# SendActivity_1oAmy2()
+[Activity
+    Text = ${SendActivity_1oAmy2_text()}
+]
+
+# SendActivity_1oAmy2_text()
+- Sorry we cannot offer an account for you. 
+# TextInput_Prompt_tA7UDn()
+[Activity
+    Text = ${TextInput_Prompt_tA7UDn_text()}
+]
+
+# TextInput_Prompt_tA7UDn_text()
+- ```Welcome to DBS. 
+My name is temi. How can i help you?```
+- ```Welcome to DBS. 
+How can I help you?```
+- ```Hey! Welcome to DBS.
+I'm Happy to help you.```
+# SendActivity_4Gtdyr()
+[Activity
+    Text = ${SendActivity_4Gtdyr_text()}
+]
+
+# SendActivity_4Gtdyr_text()
+- sure! i will help you with {user.query}
+# SendActivity_16kEGV()
+[Activity
+    Text = ${SendActivity_16kEGV_text()}
+]
+
+# SendActivity_16kEGV_text()
+- ```Sorry! I cannot understand your request. 
+you can ask me about "open account"```
+# LogAction_Text_YZHkcm()
+[Activity
+    Text = ${LogAction_Text_YZHkcm_text()}
+]
+
+# LogAction_Text_YZHkcm_text()
+- Log > ${user.query}

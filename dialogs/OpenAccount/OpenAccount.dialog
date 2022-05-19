@@ -1,0 +1,194 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "mIAhei",
+    "name": "OpenAccount",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "qhZDAd"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "rvYsjk"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_rvYsjk()}",
+          "property": "user.account"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "wn1f8z"
+          },
+          "condition": "user.account",
+          "cases": [
+            {
+              "value": "yes",
+              "actions": [
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "2aVtjR"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "prompt": "${TextInput_Prompt_2aVtjR()}",
+                  "property": "user.ib"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "jgXdJw"
+                  },
+                  "condition": "=string(user.ib)==\"yes\"",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "zgBLFr"
+                      },
+                      "activity": "${SendActivity_zgBLFr()}"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "6kXrC2"
+                      },
+                      "activity": "${SendActivity_6kXrC2()}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "no",
+              "actions": [
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "8oPGoU"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${TextInput_Prompt_8oPGoU()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "property": "user.citizen"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "EBh7sM"
+                  },
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "HQCx7H"
+                      },
+                      "activity": "${SendActivity_HQCx7H()}"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.TextInput",
+                      "$designer": {
+                        "id": "e3e4Qv"
+                      },
+                      "disabled": false,
+                      "maxTurnCount": 3,
+                      "alwaysPrompt": false,
+                      "allowInterruptions": false,
+                      "unrecognizedPrompt": "",
+                      "invalidPrompt": "",
+                      "defaultValueResponse": "",
+                      "prompt": "${TextInput_Prompt_e3e4Qv()}",
+                      "property": "user.visa"
+                    },
+                    {
+                      "$kind": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "FuowVL"
+                      },
+                      "condition": "=string(user.visa)==\"yes\"",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "JTArYt"
+                          },
+                          "activity": "${SendActivity_JTArYt()}"
+                        }
+                      ],
+                      "elseActions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "7d3Car"
+                          },
+                          "activity": "${SendActivity_7d3Car()}"
+                        }
+                      ]
+                    }
+                  ],
+                  "condition": "=string(user.citizen)==\"yes\""
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "Zf0w35"
+              },
+              "activity": "${SendActivity_Zf0w35()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Mrpo1t"
+          },
+          "activity": "${SendActivity_Mrpo1t()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "PhIz0h"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "OpenAccount.lg",
+  "recognizer": "OpenAccount.lu.qna",
+  "id": "OpenAccount"
+}

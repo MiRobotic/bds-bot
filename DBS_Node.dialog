@@ -1,0 +1,113 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "name": "DBS_Node",
+    "description": "",
+    "id": "A79tBe"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "mb2n1u",
+        "comment": "This trigger fires when an incoming activity is not handled by any other trigger."
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "kMjqz1",
+            "comment": "It is recommended to show a message to the user when the bot does not know how to handle an incoming activity and provide follow up options or a help message."
+          },
+          "activity": "${SendActivity_DidNotUnderstand()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "id": "0q0bUq",
+        "name": "Dialog started (Begin dialog event)"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "tA7UDn"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${TextInput_Prompt_tA7UDn()}",
+          "property": "user.query"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "po1Z9V"
+          },
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "16kEGV"
+              },
+              "activity": "${SendActivity_16kEGV()}"
+            }
+          ],
+          "condition": "user.query",
+          "cases": [
+            {
+              "value": "open account",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "lnACka"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "OpenAccount"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.DeleteProperty",
+          "$designer": {
+            "id": "GPAhFP"
+          },
+          "property": "user.query"
+        },
+        {
+          "$kind": "Microsoft.LogAction",
+          "$designer": {
+            "id": "YZHkcm"
+          },
+          "text": "${LogAction_Text_YZHkcm()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "xjb60Q"
+          }
+        },
+        {
+          "$kind": "Microsoft.RepeatDialog",
+          "$designer": {
+            "id": "uWSUPr"
+          },
+          "activityProcessed": true
+        }
+      ]
+    }
+  ],
+  "generator": "DBS_Node.lg",
+  "id": "DBS_Node",
+  "recognizer": "DBS_Node.lu.qna"
+}

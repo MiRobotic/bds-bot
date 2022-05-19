@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_OpenAccount",
+  "recognizers": {
+    "en-us": "OpenAccount.en-us.lu",
+    "": "OpenAccount.en-us.lu"
+  }
+}

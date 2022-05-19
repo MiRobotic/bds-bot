@@ -1,0 +1,10 @@
+{
+  "DBS_Node.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "OpenAccount.en-us"
+      ]
+    }
+  }
+}
