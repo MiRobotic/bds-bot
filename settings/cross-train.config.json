@@ -3,7 +3,8 @@
     "rootDialog": true,
     "triggers": {
       "": [
-        "OpenAccount.en-us"
+        "OpenAccount.en-us",
+        "CardReplacement.en-us"
       ]
     }
   },

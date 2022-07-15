@@ -1,0 +1,89 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "PPlQG9",
+    "name": "CardReplacement",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "cDlubu"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "uqDLjV"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${TextInput_Prompt_uqDLjV()}",
+          "property": "user.replacement",
+          "outputFormat": "=toLower(this.value)"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "2MyWZC"
+          },
+          "activity": "${SendActivity_2MyWZC()}"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "szbrD5"
+          },
+          "condition": "=user.replacement",
+          "cases": [
+            {
+              "value": "instant",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "pvmv49"
+                  },
+                  "activity": "${SendActivity_pvmv49()}"
+                }
+              ]
+            },
+            {
+              "value": "mail",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "bN3F8Z"
+                  },
+                  "activity": "${SendActivity_bN3F8Z()}"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "5zkSqS"
+              },
+              "activity": "${SendActivity_5zkSqS()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "CardReplacement.lg",
+  "recognizer": "CardReplacement.lu.qna",
+  "id": "CardReplacement"
+}

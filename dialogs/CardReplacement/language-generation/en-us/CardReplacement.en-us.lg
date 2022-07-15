@@ -1,0 +1,48 @@
+[import](common.lg)
+
+# TextInput_Prompt_uqDLjV()
+[Activity
+    Text = ${TextInput_Prompt_uqDLjV_text()}
+    SuggestedActions = {"type":"query","actions":[ "n":"Instant replacement/ Additional card application", "v": "instant"}, {"n":"Mail-in (3 to 5 working days)", "v":"mail"}]}
+]
+
+# TextInput_Prompt_uqDLjV_text()
+- ```Would you like to receive instant replacement or mail\-in (3 to 5 working days)/ Additional card application?
+```
+# SendActivity_pvmv49()
+[Activity
+    Text = ${SendActivity_pvmv49_text()}
+    SuggestedActions = {"type":"location","name":"vtm"}
+]
+
+# SendActivity_pvmv49_text()
+- Please follow me. I will guide you towards VTM.
+# SendActivity_bN3F8Z()
+[Activity
+    Text = ${SendActivity_bN3F8Z_text()}
+    SuggestedActions = {"type":"steps","name":"card replacement"}
+]
+
+# SendActivity_bN3F8Z_text()
+- Please checkout instructions for card replacement via mail
+# SendActivity_5zkSqS()
+[Activity
+    Text = ${SendActivity_5zkSqS_text()}
+]
+
+# SendActivity_5zkSqS_text()
+- Sorry! I Cannot understand your response.
+# SendActivity_D4FYCn()
+[Activity
+    Text = ${SendActivity_D4FYCn_text()}
+]
+
+# SendActivity_D4FYCn_text()
+- your response ${user.replacement}
+# SendActivity_2MyWZC()
+[Activity
+    Text = ${SendActivity_2MyWZC_text()}
+]
+
+# SendActivity_2MyWZC_text()
+- your response ${user.replacement}

@@ -44,7 +44,8 @@
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
           "prompt": "${TextInput_Prompt_tA7UDn()}",
-          "property": "user.query"
+          "property": "user.query",
+          "outputFormat": "=toLower(this.value)"
         },
         {
           "$kind": "Microsoft.SwitchCondition",
@@ -72,6 +73,19 @@
                   },
                   "activityProcessed": true,
                   "dialog": "OpenAccount"
+                }
+              ]
+            },
+            {
+              "value": "card replacement",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "ciBXlo"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "CardReplacement"
                 }
               ]
             }

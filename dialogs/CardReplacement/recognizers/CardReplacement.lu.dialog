@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_CardReplacement",
+  "recognizers": {
+    "en-us": "CardReplacement.en-us.lu",
+    "": "CardReplacement.en-us.lu"
+  }
+}

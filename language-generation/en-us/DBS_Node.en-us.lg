@@ -19,7 +19,7 @@
 # TextInput_Prompt_tA7UDn()
 [Activity
     Text = ${TextInput_Prompt_tA7UDn_text()}
-    SuggestedActions = {"type":"buttons","actions":["open account"]}
+    SuggestedActions = {"type":"buttons","actions":[ "Open Account", "Card Replacement"]}
 ]
 
 # TextInput_Prompt_tA7UDn_text()
