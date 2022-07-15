@@ -3,7 +3,7 @@
 # TextInput_Prompt_uqDLjV()
 [Activity
     Text = ${TextInput_Prompt_uqDLjV_text()}
-    SuggestedActions = {"type":"query","actions":[ "n":"Instant replacement/ Additional card application", "v": "instant"}, {"n":"Mail-in (3 to 5 working days)", "v":"mail"}]}
+    SuggestedActions = {"type":"query","actions":[ {"n":"Instant replacement/ Additional card application", "v": "instant"}, {"n":"Mail-in (3 to 5 working days)", "v":"mail"}]}
 ]
 
 # TextInput_Prompt_uqDLjV_text()
@@ -38,11 +38,4 @@
 ]
 
 # SendActivity_D4FYCn_text()
-- your response ${user.replacement}
-# SendActivity_2MyWZC()
-[Activity
-    Text = ${SendActivity_2MyWZC_text()}
-]
-
-# SendActivity_2MyWZC_text()
 - your response ${user.replacement}

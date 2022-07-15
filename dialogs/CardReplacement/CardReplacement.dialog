@@ -32,13 +32,6 @@
           "outputFormat": "=toLower(this.value)"
         },
         {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "2MyWZC"
-          },
-          "activity": "${SendActivity_2MyWZC()}"
-        },
-        {
           "$kind": "Microsoft.SwitchCondition",
           "$designer": {
             "id": "szbrD5"
