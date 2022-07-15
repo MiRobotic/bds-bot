@@ -19,6 +19,7 @@
 # TextInput_Prompt_tA7UDn()
 [Activity
     Text = ${TextInput_Prompt_tA7UDn_text()}
+    SuggestedActions = {"type":"buttons","actions":["open account"]}
 ]
 
 # TextInput_Prompt_tA7UDn_text()
@@ -50,3 +51,10 @@ you can ask me about "open account"```
 
 # LogAction_Text_YZHkcm_text()
 - Log > ${user.query}
+# SendActivity_IWybuB()
+[Activity
+    Text = ${SendActivity_IWybuB_text()}
+]
+
+# SendActivity_IWybuB_text()
+- end

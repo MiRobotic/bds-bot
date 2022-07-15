@@ -1,0 +1,290 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "8Cscc3",
+    "name": "AccountOffline",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "rWrJMF"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "9D0S2s"
+          },
+          "condition": "=(string(user.citizen)==\"yes\" || string(user.account)==\"yes\")",
+          "actions": [
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "Wd2Hjo"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "prompt": "${TextInput_Prompt_Wd2Hjo()}",
+              "property": "user.docs"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "9jAPnt"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "prompt": "${TextInput_Prompt_9jAPnt()}",
+              "property": "user.docs"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "nXEusT"
+          },
+          "condition": "=string(user.docs)==\"yes\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "GX8Y2K"
+              },
+              "condition": "=string(user.account)==\"yes\"",
+              "actions": [
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "8GCaUv"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${TextInput_Prompt_8GCaUv()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "property": "user.accountType"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "UMgVn7"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "prompt": "${TextInput_Prompt_UMgVn7()}",
+                  "property": "user.accountType"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.SwitchCondition",
+              "$designer": {
+                "id": "XH6CQ5"
+              },
+              "condition": "user.accountType",
+              "default": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "TC2nmD"
+                  },
+                  "activity": "${SendActivity_TC2nmD()}"
+                }
+              ],
+              "cases": [
+                {
+                  "value": "my account",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "vlVuDS"
+                      },
+                      "property": "user.acInfo",
+                      "value": "My Account\\n(Personal and Joint\\-alternate account available)\\n\\nThe first account you can customize to the way you live."
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "z5POTY"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "GoToAccount"
+                    }
+                  ]
+                },
+                {
+                  "value": "dbs multiplier account",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "ZWfYmq"
+                      },
+                      "property": "user.acInfo",
+                      "value": "DBS Multiplier Account (Personal account only)  Earn up to 3.00% p.a. on your savings. No minimum salary credit. No minimum credit card spend. Plus, save and transact in SGD and foreign currencies in one account."
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "hp3HZY"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "GoToAccount"
+                    }
+                  ]
+                },
+                {
+                  "value": "my savings account",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "X4TVIb"
+                      },
+                      "property": "user.acInfo",
+                      "value": "eMySavings Account (Personal and Joint\\-alternate account available)  A special savings account that allows you to save monthly in a hassle\\-free way."
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "mh1ezF"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "GoToAccount"
+                    }
+                  ]
+                },
+                {
+                  "value": "posb save account",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "dlbIm0"
+                      },
+                      "property": "user.acInfo",
+                      "value": "POSB SAYE Account (Personal account only)  Enjoy extra 2% p.a. interest when you credit your salary and have successful monthly saving with us."
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "956ZXp"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "GoToAccount"
+                    }
+                  ]
+                },
+                {
+                  "value": "posb payroll account",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "grmTKp"
+                      },
+                      "property": "user.acInfo",
+                      "value": "POSB Payroll Account (Personal account only)  A specially designed account for Work Permit worker to receive salary payment."
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "dKVJef"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "GoToAccount"
+                    }
+                  ]
+                },
+                {
+                  "value": "fixed deposit account",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "phBmCU"
+                      },
+                      "property": "user.acInfo",
+                      "value": "Fixed Deposit Account (Personal account only)  Save a fixed amount for a fixed tenor at competitive interest rates with the mufti\\-currency Fixed Deposit."
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "tkfeMj"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "GoToAccount"
+                    }
+                  ]
+                },
+                {
+                  "value": "supplementary retirement scheme",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "WZG0vc"
+                      },
+                      "property": "user.acInfo",
+                      "value": "Supplementary Retirement Scheme (Personal account only)  Supplementary Retirement Scheme (SRS) lets you save for your retirement and enjoys tax benefits."
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "Y0OZnk"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "GoToAccount"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "SNx7yo"
+              },
+              "activity": "${SendActivity_SNx7yo()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "AccountOffline.lg",
+  "recognizer": "AccountOffline.lu.qna",
+  "id": "AccountOffline"
+}

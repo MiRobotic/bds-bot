@@ -1,0 +1,65 @@
+[import](common.lg)
+
+# SendActivity_SNx7yo()
+[Activity
+    Text = ${SendActivity_SNx7yo_text()}
+]
+
+# SendActivity_SNx7yo_text()
+- ```We will need these docuemnt to open new account for you.
+Please bring these documents and try again.
+thank you for choosing DBS.```
+# SendActivity_d1rvFV()
+[Activity
+    Text = ${SendActivity_d1rvFV_text()}
+    SuggestedActions = {"type":"move","location":"account"}
+]
+
+# SendActivity_d1rvFV_text()
+- action
+# TextInput_Prompt_8GCaUv()
+[Activity
+    Text = ${TextInput_Prompt_8GCaUv_text()}
+    SuggestedActions = {"type":"buttons","actions":["My Account", "DBS Multiplier Account", "My Savings Account", "POSB SAVE Account", "Fixed Deposit Account", "Supplementary Retirement Scheme"]}
+]
+
+# TextInput_Prompt_8GCaUv_text()
+- Please select account type you want to open for existing  customers.
+# TextInput_Prompt_UMgVn7()
+[Activity
+    Text = ${TextInput_Prompt_UMgVn7_text()}
+    SuggestedActions = {"type":"buttons","actions":["My Account", "DBS Multiplier Account", "My Savings Account", "POSB SAVE Account", "POSB Payroll Account"]}
+]
+
+# TextInput_Prompt_UMgVn7_text()
+- Please select account type you want to open for new customers.
+# SendActivity_TC2nmD()
+[Activity
+    Text = ${SendActivity_TC2nmD_text()}
+]
+
+# SendActivity_TC2nmD_text()
+- Sorry! I cannot understand your response.
+# TextInput_Prompt_Wd2Hjo()
+[Activity
+    Text = ${TextInput_Prompt_Wd2Hjo_text()}
+    SuggestedActions = {"type":"buttons","actions":["Yes", "No"], "images": [{"name": "NIRC", "url":"https://firebasestorage.googleapis.com/v0/b/miroboticproject.appspot.com/o/dbs%2Fs_nirc.png?alt=media&token=f6c40d1f-0a24-40a6-8e6b-3aff4f415228"}, {"name": "Proof of Residential Address", "url":"https://firebasestorage.googleapis.com/v0/b/miroboticproject.appspot.com/o/dbs%2Fbill.png?alt=media&token=22ed8f3d-fa1a-4466-b5fc-36ebf7da9011"}]}
+]
+
+# TextInput_Prompt_Wd2Hjo_text()
+- ```Do you have following documments ready with you?
+
+1. Identification Document
+2. Proof of Residential Address```
+# TextInput_Prompt_9jAPnt()
+[Activity
+    Text = ${TextInput_Prompt_9jAPnt_text()}
+    SuggestedActions = {"type":"buttons","actions":["Yes", "No"], "images": [{"name": "NIRC", "url":"https://firebasestorage.googleapis.com/v0/b/miroboticproject.appspot.com/o/dbs%2Fm_nirc.png?alt=media&token=b4177904-f2a0-4bee-b133-9c6995d75980"}, {"name": "Passport", "url":"https://firebasestorage.googleapis.com/v0/b/miroboticproject.appspot.com/o/dbs%2Fpassport.png?alt=media&token=6b138aec-2183-47f5-9beb-c7861946685f"},  {"name": "Proof of Residential Address", "url":"https://firebasestorage.googleapis.com/v0/b/miroboticproject.appspot.com/o/dbs%2Fbill.png?alt=media&token=22ed8f3d-fa1a-4466-b5fc-36ebf7da9011"}, {"name": "Proof of Employment", "url":"https://firebasestorage.googleapis.com/v0/b/miroboticproject.appspot.com/o/dbs%2Femp.png?alt=media&token=022f03a4-2ad2-49d8-ae08-9c92d407d68a"}]}
+]
+
+# TextInput_Prompt_9jAPnt_text()
+- ```Do you have following documments ready with you?
+
+1. Identification Document
+2. Proof of Residential Address
+3. Proof of Employment```

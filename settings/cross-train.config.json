@@ -6,5 +6,30 @@
         "OpenAccount.en-us"
       ]
     }
+  },
+  "AccountOffline.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "GoToAccount.en-us",
+        "GoToAccount.en-us",
+        "GoToAccount.en-us",
+        "GoToAccount.en-us",
+        "GoToAccount.en-us",
+        "GoToAccount.en-us",
+        "GoToAccount.en-us"
+      ]
+    }
+  },
+  "OpenAccount.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "AccountOffline.en-us",
+        "AccountApplyOnline.en-us",
+        "AccountOffline.en-us",
+        "AccountOffline.en-us"
+      ]
+    }
   }
 }

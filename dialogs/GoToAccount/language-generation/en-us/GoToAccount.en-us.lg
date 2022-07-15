@@ -1,0 +1,27 @@
+[import](common.lg)
+
+# TextInput_Prompt_jBOUxm()
+[Activity
+    Text = ${TextInput_Prompt_jBOUxm_text()}
+    SuggestedActions = {"type":"buttons","actions":["Yes", "No"]}
+]
+
+# TextInput_Prompt_jBOUxm_text()
+- ```${user.acInfo}
+
+Do you want me to navigate you to our staff to process account opening at branch?```
+# SendActivity_fzszEq()
+[Activity
+    Text = ${SendActivity_fzszEq_text()}
+    SuggestedActions = {"type":"location","name":"account"}
+]
+
+# SendActivity_fzszEq_text()
+- Please follow me to our accounts staff.
+# SendActivity_bgZs85()
+[Activity
+    Text = ${SendActivity_bgZs85_text()}
+]
+
+# SendActivity_bgZs85_text()
+- Thank you for choosing DBS

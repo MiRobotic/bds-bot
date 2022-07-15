@@ -44,7 +44,7 @@
                 {
                   "$kind": "Microsoft.TextInput",
                   "$designer": {
-                    "id": "2aVtjR"
+                    "id": "X0jYBC"
                   },
                   "disabled": false,
                   "maxTurnCount": 3,
@@ -53,31 +53,34 @@
                   "unrecognizedPrompt": "",
                   "invalidPrompt": "",
                   "defaultValueResponse": "",
-                  "prompt": "${TextInput_Prompt_2aVtjR()}",
-                  "property": "user.ib"
+                  "prompt": "${TextInput_Prompt_X0jYBC()}",
+                  "property": "user.online"
                 },
                 {
                   "$kind": "Microsoft.IfCondition",
                   "$designer": {
-                    "id": "jgXdJw"
+                    "id": "igW8XL"
                   },
-                  "condition": "=string(user.ib)==\"yes\"",
-                  "actions": [
-                    {
-                      "$kind": "Microsoft.SendActivity",
-                      "$designer": {
-                        "id": "zgBLFr"
-                      },
-                      "activity": "${SendActivity_zgBLFr()}"
-                    }
-                  ],
+                  "condition": "=string(user.online)==\"yes\"",
                   "elseActions": [
                     {
-                      "$kind": "Microsoft.SendActivity",
+                      "$kind": "Microsoft.BeginDialog",
                       "$designer": {
-                        "id": "6kXrC2"
+                        "id": "utz5lL"
                       },
-                      "activity": "${SendActivity_6kXrC2()}"
+                      "activityProcessed": true,
+                      "options": {},
+                      "dialog": "AccountOffline"
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "OZ7Fwb"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "AccountApplyOnline"
                     }
                   ]
                 }
@@ -108,11 +111,12 @@
                   },
                   "actions": [
                     {
-                      "$kind": "Microsoft.SendActivity",
+                      "$kind": "Microsoft.BeginDialog",
                       "$designer": {
-                        "id": "HQCx7H"
+                        "id": "6rBj2S"
                       },
-                      "activity": "${SendActivity_HQCx7H()}"
+                      "activityProcessed": true,
+                      "dialog": "AccountOffline"
                     }
                   ],
                   "elseActions": [
@@ -139,20 +143,21 @@
                       "condition": "=string(user.visa)==\"yes\"",
                       "actions": [
                         {
-                          "$kind": "Microsoft.SendActivity",
+                          "$kind": "Microsoft.BeginDialog",
                           "$designer": {
-                            "id": "JTArYt"
+                            "id": "ux9OlW"
                           },
-                          "activity": "${SendActivity_JTArYt()}"
+                          "activityProcessed": true,
+                          "dialog": "AccountOffline"
                         }
                       ],
                       "elseActions": [
                         {
                           "$kind": "Microsoft.SendActivity",
                           "$designer": {
-                            "id": "7d3Car"
+                            "id": "3BDTFi"
                           },
-                          "activity": "${SendActivity_7d3Car()}"
+                          "activity": "${SendActivity_3BDTFi()}"
                         }
                       ]
                     }
@@ -169,21 +174,21 @@
                 "id": "Zf0w35"
               },
               "activity": "${SendActivity_Zf0w35()}"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "50E61l"
+              }
+            },
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "pbT1yg"
+              },
+              "activityProcessed": true
             }
           ]
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "Mrpo1t"
-          },
-          "activity": "${SendActivity_Mrpo1t()}"
-        },
-        {
-          "$kind": "Microsoft.EndDialog",
-          "$designer": {
-            "id": "PhIz0h"
-          }
         }
       ]
     }

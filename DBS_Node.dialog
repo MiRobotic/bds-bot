@@ -78,29 +78,22 @@
           ]
         },
         {
-          "$kind": "Microsoft.DeleteProperty",
+          "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "GPAhFP"
+            "id": "IWybuB"
           },
-          "property": "user.query"
+          "activity": "${SendActivity_IWybuB()}"
         },
         {
-          "$kind": "Microsoft.LogAction",
+          "$kind": "Microsoft.EndTurn",
           "$designer": {
-            "id": "YZHkcm"
-          },
-          "text": "${LogAction_Text_YZHkcm()}"
-        },
-        {
-          "$kind": "Microsoft.EndDialog",
-          "$designer": {
-            "id": "xjb60Q"
+            "id": "KnzMNj"
           }
         },
         {
-          "$kind": "Microsoft.RepeatDialog",
+          "$kind": "Microsoft.CancelAllDialogs",
           "$designer": {
-            "id": "uWSUPr"
+            "id": "DrwFGa"
           },
           "activityProcessed": true
         }

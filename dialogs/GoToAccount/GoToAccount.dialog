@@ -1,0 +1,65 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "oKFx2e",
+    "name": "GoToAccount",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "65Iyvu"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "jBOUxm"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_jBOUxm()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.goToAccounts"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "9nxsF8"
+          },
+          "condition": "=string(user.goToAccounts)==\"yes\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "fzszEq"
+              },
+              "activity": "${SendActivity_fzszEq()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "bgZs85"
+              },
+              "activity": "${SendActivity_bgZs85()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "GoToAccount.lg",
+  "recognizer": "GoToAccount.lu.qna",
+  "id": "GoToAccount"
+}

@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_AccountOffline",
+  "recognizers": {
+    "en-us": "AccountOffline.en-us.lu",
+    "": "AccountOffline.en-us.lu"
+  }
+}

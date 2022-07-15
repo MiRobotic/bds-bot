@@ -1,0 +1,44 @@
+[import](common.lg)
+
+# TextInput_Prompt_1Qh7FW()
+[Activity
+    Text = ${TextInput_Prompt_1Qh7FW_text()}
+    SuggestedActions = {"type":"buttons","actions":["Yes", "No"]}
+]
+
+# TextInput_Prompt_1Qh7FW_text()
+- Do you have an Internet banking with us?
+# TextInput_Prompt_r6gpP6()
+[Activity
+    Text = ${TextInput_Prompt_r6gpP6_text()}
+    SuggestedActions = {"type":"buttons","actions":["Yes", "No"]}
+]
+
+# TextInput_Prompt_r6gpP6_text()
+- Do you want to signup for internet banking?
+# SendActivity_T7Q9mh()
+[Activity
+    Text = ${SendActivity_T7Q9mh_text()}
+    SuggestedActions = {"type":"qr","link":"https://www.dbs.com.sg/personal/support/bank-account-opening-documents-required.html"}
+]
+
+# SendActivity_T7Q9mh_text()
+- ```You will need an access of internet banking to apply for account online. please signup for internet banking and try again.
+
+Please scan this QR code for more details```
+# SendActivity_5BdsDO()
+[Activity
+    Text = ${SendActivity_5BdsDO_text()}
+    SuggestedActions = {"type":"qr","link":"https://www.dbs.com/digibank/in/banking/internet-banking/default.page"}
+]
+
+# SendActivity_5BdsDO_text()
+- Register and activate your digibank now and experience a simpler way of banking anytime, anywhere. Upon sign-up and activation, you will also be able to access the full suite of digital services.
+# SendActivity_2rq6M0()
+[Activity
+    Text = ${SendActivity_2rq6M0_text()}
+    SuggestedActions = {"type":"qr","link":"https://www.dbs.com.sg/personal/support/bank-ibanking-application.html?pid=sg-dbs-help-support-guide-ibanking-cardtile"}
+]
+
+# SendActivity_2rq6M0_text()
+- To apply for new account using internet banking, please scan follwoing QR code to apply for new account using internet banking. 
